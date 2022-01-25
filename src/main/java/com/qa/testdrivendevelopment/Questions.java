@@ -58,7 +58,6 @@ public class Questions {
 
 	public String sandwichFilling(String sandwich) {
 		String fillingRev = "";
-		
 		// 1. work out if there are 2 occurrences of bread - if no, return ""
 		if (!sandwich.toLowerCase().contains("bread")) {
 			return fillingRev;
@@ -67,7 +66,7 @@ public class Questions {
 			return fillingRev;
 		}
 		// 2. extract the string between the breads
-		String filling = sandwich.substring((sandwich.toLowerCase().indexOf("bread") + 5), 
+		String filling = sandwich.substring((sandwich.toLowerCase().indexOf("bread") + 5),
 				(sandwich.toLowerCase().lastIndexOf("bread")));
 		// 3. reverse the string and return it
 		for (int i = (filling.length() - 1); i >= 0; i--) {
@@ -112,8 +111,7 @@ public class Questions {
 		int stringLength = input.length();
 		int step = (stringLength - n) / 2;
 
-		String newString = input.substring(0, step) + 
-				input.substring((stringLength - step), stringLength);
+		String newString = input.substring(0, step) + input.substring((stringLength - step), stringLength);
 
 		return newString;
 	}
